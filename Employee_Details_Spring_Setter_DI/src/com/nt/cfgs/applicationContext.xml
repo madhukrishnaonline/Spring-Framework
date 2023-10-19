@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <!--Dependent BeanClass Configuration -->
+    <bean id="address1" class="com.nt.student.info.Address">
+      <property name="street" value="Ameerpet"/>
+      <property name="city" value="Hyderabad"/>
+      <property name="country" value="IND"/>
+      <property name="pincode" value="500016"/>
+    </bean>
+    
+    <!-- Target BeanClass Configuration -->
+    <bean id="student1" class="com.nt.student.info.Student">
+      <property name="id" value="1996"/>
+      <property name="name" value="Madhu Krishna"/>
+      <property name="addr" ref="address1"/>
+    </bean>
+    
+    <bean id="details" class="com.nt.student.info.StudentDetails">
+       <property name="Student" ref="student1"/>
+    </bean>
+</beans>
