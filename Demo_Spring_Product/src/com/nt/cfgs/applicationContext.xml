@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="product" class="com.nt.beans.Product">
+      <property name="orderId" value="mk635132384"/>
+      <property name="price" value="999.90f"/>
+      <property name="isOrderDeliverd" value="true"></property>
+      <property name="items">
+          <set>
+             <value>Mouse</value>
+             <value>KeyBoard</value>
+             <value>Copper Bottle</value>
+             <value>Copper Bottle</value>
+          </set>
+      </property>
+      <property name="itemPrices">
+         <map>
+             <entry key="Mouse" value="599"/>
+             <entry key="KeyBoard" value="999"/>
+             <entry key="Copper Bottle" value="1025"/>
+             <entry key="Copper Bottle" value="1025"/>
+          </map>
+      </property>
+    </bean>
+
+</beans>
